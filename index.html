@@ -1,0 +1,56 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HEMOTEC BIO — SN115 Live Collection</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#02090d;color:#d9f5f8;font-family:Consolas,monospace}.sys{height:100vh;padding:28px 34px;display:grid;grid-template-rows:65px 1fr 38px;gap:18px;background:linear-gradient(rgba(50,180,200,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(50,180,200,.025) 1px,transparent 1px);background-size:42px 42px}.head{border-bottom:1px solid #17414b;display:flex;justify-content:space-between}.brand{font-size:22px;letter-spacing:4px;font-weight:bold}.sub,.dim{color:#65848a;font-size:9px;letter-spacing:2px}.right{text-align:right;font-size:10px;color:#65848a}.cyan{color:#48d8e8}.main{display:grid;grid-template-columns:280px 1fr 270px;gap:18px;min-height:0}.panel{border:1px solid #17414b;background:linear-gradient(145deg,#08191f,#030c10);position:relative;overflow:hidden}.title{height:42px;border-bottom:1px solid #15343c;padding:14px;font-size:10px;letter-spacing:1.5px}.pad{padding:18px}.id{font-size:44px;color:white;margin:6px 0}.grade{color:#48d8e8;letter-spacing:3px;margin-bottom:25px}.row{border-top:1px solid #14343c;padding:13px 0}.lab{font-size:8px;color:#65848a;letter-spacing:1px}.val{margin-top:5px;font-size:13px}.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#68efb1;box-shadow:0 0 10px #68efb1;margin-right:7px}.center{display:grid;grid-template-rows:1fr 115px;gap:18px;min-width:0}.graphwrap{height:calc(100% - 42px);padding:20px 22px 24px 55px}.graph{height:100%;position:relative;border-left:1px solid #24505a;border-bottom:1px solid #24505a;background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(20% - 1px),rgba(70,150,165,.1) calc(20% - 1px),rgba(70,150,165,.1) 20%)}svg{width:100%;height:100%;position:absolute;inset:0}.line{fill:none;stroke:#48d8e8;stroke-width:2.5}.glow{fill:none;stroke:rgba(72,216,232,.18);stroke-width:9}.fill{fill:rgba(72,216,232,.09)}.threshold{position:absolute;left:0;right:0;top:22%;border-top:1px dashed rgba(104,239,177,.5);font-size:7px;color:#68a98b;text-align:right}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#17414b}.metric{background:#061319;padding:16px}.mval{font-size:28px;color:white;margin-top:8px}.bar{height:2px;background:#17333a;margin-top:12px}.bar i{display:block;height:100%;width:0;background:#48d8e8}.status{text-align:center;padding:24px 18px}.pct{font-size:60px;color:white;margin:12px}.progress{height:4px;background:#122b31}.progress i{display:block;height:100%;width:0;background:#48d8e8}.srow{display:flex;justify-content:space-between;font-size:8px;color:#65848a;margin-top:17px}.log{padding:13px;font-size:8px;line-height:1.9;color:#58757b}.foot{border-top:1px solid #17414b;display:flex;align-items:center;justify-content:space-between;color:#426168;font-size:8px;letter-spacing:1px}
+.start,.success{position:fixed;inset:0;z-index:10;background:#02090d;display:flex;align-items:center;justify-content:center;text-align:center}.start h1{font-size:34px;letter-spacing:4px}.start button{margin-top:35px;width:220px;height:45px;background:transparent;border:1px solid #48d8e8;color:#48d8e8;letter-spacing:2px;cursor:pointer}.success{z-index:9;background:rgba(1,9,12,.93);display:none}.successbox{border:1px solid #68efb1;padding:48px 70px}.successbig{font-size:66px;letter-spacing:11px;color:#68efb1;font-weight:bold;text-shadow:0 0 25px rgba(104,239,177,.35)}
+</style></head><body>
+<div class="start" id="start"><div><div class="cyan" style="letter-spacing:7px">HEMOTEC BIO</div><h1>COLLECTION MONITOR</h1><div class="sub">REAL-TIME CELLULAR RESPONSE ANALYSIS</div><button onclick="begin()">START COLLECTION</button></div></div>
+<div class="success" id="success"><div class="successbox"><div class="sub">HEMOTEC BIO / COLLECTION SYSTEM</div><div class="successbig">SUCCESS</div><div class="cyan" style="letter-spacing:3px">CELLULAR RESPONSE VERIFIED</div></div></div>
+<div class="sys"><div class="head"><div><div class="brand">HEMOTEC BIO</div><div class="sub">REGENERATIVE CELL RESEARCH DIVISION</div></div><div class="right">COLLECTION SYSTEM / <span class="cyan">ACTIVE</span><br>NODE 04 · LAB NETWORK SECURE</div></div>
+<div class="main"><div class="panel"><div class="title">SUBJECT DATA</div><div class="pad"><div class="lab">PROVIDER ID</div><div class="id">SN115</div><div class="grade">CLASS / S</div><div class="row"><div class="lab">STATUS</div><div class="val"><span class="dot"></span>CONNECTED</div></div><div class="row"><div class="lab">SAMPLE TYPE</div><div class="val">WHOLE BLOOD</div></div><div class="row"><div class="lab">COLLECTION PORT</div><div class="val">UNIT 04-A</div></div><div class="row"><div class="lab">REGENERATION CLASS</div><div class="val">HIGH RESPONSE</div></div></div></div>
+<div class="center"><div class="panel"><div class="title">CELLULAR RESPONSE / LIVE <span class="cyan" style="float:right">● REAL-TIME</span></div><div class="graphwrap"><div class="graph"><div class="threshold">RESPONSE THRESHOLD&nbsp;</div><svg viewBox="0 0 1000 400" preserveAspectRatio="none"><path id="fill" class="fill"/><path id="glow" class="glow"/><path id="line" class="line"/></svg></div></div></div>
+<div class="metrics"><div class="metric"><div class="lab">CELL ACTIVITY</div><div class="mval"><span id="cell">12.4</span><small>%</small></div><div class="bar"><i id="cellbar"></i></div></div><div class="metric"><div class="lab">REGENERATION RESPONSE</div><div class="mval"><span id="regen">08.1</span><small>%</small></div><div class="bar"><i id="regenbar"></i></div></div><div class="metric"><div class="lab">SAMPLE STABILITY</div><div class="mval"><span id="stable">74.8</span><small>%</small></div><div class="bar"><i id="stablebar"></i></div></div></div></div>
+<div style="display:grid;grid-template-rows:1fr 190px;gap:18px"><div class="panel"><div class="title">COLLECTION STATUS</div><div class="status"><div><span class="pct" id="pct">0</span><span class="dim">%</span></div><div class="progress"><i id="prog"></i></div><div class="srow"><span>FLOW RATE</span><b id="flow">0.0 mL/min</b></div><div class="srow"><span>VOLUME</span><b id="vol">0.0 mL</b></div><div class="srow"><span>RESPONSE</span><b id="resp">ANALYZING</b></div></div></div><div class="panel"><div class="title">SYSTEM LOG</div><div class="log" id="log">&gt; SUBJECT LINK ESTABLISHED<br>&gt; SENSOR ARRAY READY<br>&gt; WAITING FOR COLLECTION</div></div></div></div>
+<div class="foot"><span>HEMOTEC BIO / INTERNAL RESEARCH NETWORK</span><span>F2 RESET · SPACE START · ESC CLOSE RESULT</span></div></div>
+<script>
+var run=false,raf=null;function E(x){return document.getElementById(x)}
+function graph(p){
+  // Continuous response curve: sample the complete curve at fine intervals,
+  // then reveal it at a continuously moving endpoint instead of whole segments.
+  var end=Math.max(0,Math.min(1,p)), points=[];
+  function response(q){
+    // Distinct bursts of growth separated by slower, almost flat stretches.
+    // Each burst eases in and out: visible bends, no harsh polygon corners.
+    var keys=[
+      [0.00,.10],[.10,.17],[.19,.20],[.31,.41],
+      [.40,.44],[.50,.48],[.61,.70],[.69,.72],
+      [.77,.75],[.89,.88],[.95,.90],[1.00,.92]
+    ];
+    var v=keys[keys.length-1][1];
+    for(var k=1;k<keys.length;k++){
+      if(q<=keys[k][0]){
+        var u=(q-keys[k-1][0])/(keys[k][0]-keys[k-1][0]);
+        // Smooth interpolation gives a soft shoulder at each change of slope.
+        u=u*u*(3-2*u);
+        v=keys[k-1][1]+(keys[k][1]-keys[k-1][1])*u;
+        break;
+      }
+    }
+    // Small restrained measurement variation, fading at endpoints.
+    var variation=.0045*Math.sin(q*63)*Math.sin(Math.PI*q);
+    return Math.max(.04,Math.min(.97,v+variation));
+  }
+  var steps=Math.max(1,Math.ceil(end*320));
+  for(var i=0;i<=steps;i++){
+    var q=end*i/steps;
+    points.push([q*1000,(1-response(q))*400]);
+  }
+  var d=points.map(function(pt,i){return(i?' L ':'M ')+pt[0].toFixed(2)+' '+pt[1].toFixed(2)}).join('');
+  E('line').setAttribute('d',d);
+  E('glow').setAttribute('d',d);
+  var z=points[points.length-1];
+  E('fill').setAttribute('d',d+' L '+z[0].toFixed(2)+' 400 L 0 400 Z');
+}
+function L(t){E("log").innerHTML+="<br>&gt; "+t}
+function begin(){if(run)return;run=true;E("start").style.display="none";E("success").style.display="none";var st=performance.now(),dur=8000;L("COLLECTION SEQUENCE STARTED");setTimeout(function(){L("BLOOD FLOW DETECTED")},1000);setTimeout(function(){L("CELLULAR RESPONSE RISING")},2800);setTimeout(function(){L("S-CLASS RESPONSE CONFIRMED")},5200);function tick(now){var p=Math.min(1,(now-st)/dur),s=1-Math.pow(1-p,1.7);graph(s);var pc=Math.round(s*100);E("pct").textContent=pc;E("prog").style.width=pc+"%";var c=12.4+80*s,r=8.1+79*s,v=74.8+1.5*s;E("cell").textContent=c.toFixed(1);E("regen").textContent=r.toFixed(1);E("stable").textContent=v.toFixed(1);E("cellbar").style.width=c+"%";E("regenbar").style.width=r+"%";E("stablebar").style.width=v+"%";E("flow").textContent=(2.1+Math.sin(now/350)*.3).toFixed(1)+" mL/min";E("vol").textContent=(s*5).toFixed(1)+" mL";E("resp").textContent=p<.35?"ANALYZING":p<.72?"ELEVATED":"HIGH RESPONSE";if(p<1)raf=requestAnimationFrame(tick);else{run=false;L("COLLECTION SUCCESS");setTimeout(function(){E("success").style.display="flex"},400)}}raf=requestAnimationFrame(tick)}
+function reset(){location.reload()}document.onkeydown=function(e){if(e.code==="Space"&&E("start").style.display!=="none"){e.preventDefault();begin()}if(e.key==="F2"){e.preventDefault();reset()}if(e.key==="Escape")E("success").style.display="none"}
+</script></body></html>
